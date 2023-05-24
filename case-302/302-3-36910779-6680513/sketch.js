@@ -43,11 +43,29 @@ function setup()
 	//complete the initialisation of the first spotlight
   	//with properties x, y, endX and endY
 	spotlight1 = {
+		x: 575,
+		y: 640,
+		endX: 150,
+		endY: 810,
 		image: spotlight_image
 	}
 
 	//Initialize the second and third spotlights following the same pattern
+	spotlight2 = {
+		x: 575,
+		y: 640,
+		endX: 180,
+		endY: 300,
+		image: spotlight_image
+	}
 
+	spotlight3 = {
+		x: 575,
+		y: 640,
+		endX: 750,
+		endY: 120,
+		image: spotlight_image
+	}
 }
 
 
@@ -56,7 +74,16 @@ function draw()
 	image(img, 0, 0);
 
 	// alter the properties x and y of the objects below to animate the spotlights
+	// x increases from left to right
+	// y increases from top to bottom
+	spotlight1.x -= 1;
+	spotlight1.y += 1 * .5;
 
+	spotlight2.x -= 1;
+	spotlight2.y -= 1;
+
+	spotlight3.x += 1 * .4;
+	spotlight3.y -= 1;
 
 
 	////////// DO NOT CHANGE ANYTHING BELOW /////////////
